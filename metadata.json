@@ -1,0 +1,6 @@
+{
+  "name": "Campus Attendance Register",
+  "description": "A campus attendance registration system for managing and recording student attendance across classes and activities.",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
