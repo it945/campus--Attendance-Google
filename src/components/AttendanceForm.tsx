@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { z } from "zod";
 import { BookOpen, CheckCircle2, ChevronDown, ClipboardList, LoaderCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -48,7 +47,7 @@ export function AttendanceForm() {
     const parsed = AttendanceSubmissionSchema.safeParse({ studentName, rollNumber, className });
     if (!parsed.success) {
       setError(
-        z.flattenError(parsed.error).formErrors[0] ?? "Please check your details and try again.",
+        parsed.error.flatten().formErrors[0] ?? "Please check your details and try again.",
       );
       return;
     }
